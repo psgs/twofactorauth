@@ -36,8 +36,30 @@ body {
   background: none;
 }
 
+h1, h2 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
 p {
   margin: 1em 0;
+}
+
+.logo-wrapper {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  box-sizing: border-box;
+  outline: none;
+  padding: 12px 0;
+  width: 10%;
+  margin: 0 auto 18px auto;
+
+  img {
+    // Image is slightly off centre
+    transform: translateX(-1%);
+    vertical-align: middle;
+    width: 45%;
+  }
 }
 
 .website-table .left,
@@ -104,10 +126,11 @@ p {
 }
 
 input[type=search] {
-  @include transition(all, ease, 300ms);
-  border: 1px #E3E3E3 solid;
-  border-radius: 30px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  //@include transition(all, ease, 300ms);
+  //border: 1px #E3E3E3 solid;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px 1px rgba(60,64,67,.15);
   display: block;
   padding: 10px 45px;
   width: 100%;
@@ -116,8 +139,9 @@ input[type=search] {
   box-sizing: border-box;
 
   &:focus {
-    border-color: $primary-color;
-    box-shadow: 0 0 10px $primary-color;
+    box-shadow: 0 2px 6px 2px rgba(60,64,67,.15);
+    //border-color: $primary-color;
+    //box-shadow: 0 0 10px $primary-color;
     outline: none;
   }
 }
@@ -323,5 +347,9 @@ span.progress {
 @media(max-width: 768px) {
   .desktop-table {
     display: none;
+  }
+
+  .logo-wrapper {
+    width: 22%;
   }
 }
